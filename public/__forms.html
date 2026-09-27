@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Form detection</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms detects forms from static HTML at deploy time.
+      This hidden copy must list every field used in components/ContactForm.tsx.
+      Visitors never see this page; the React form posts to it with fetch().
+    -->
+    <form name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="enquiry" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="businessName" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <select name="businessType"><option value="">-</option></select>
+      <textarea name="process"></textarea>
+      <input type="radio" name="nextStep" value="Discovery call" />
+      <input type="radio" name="nextStep" value="Reply by email" />
+    </form>
+  </body>
+</html>
